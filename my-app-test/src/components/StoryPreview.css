@@ -1,13 +1,12 @@
 /* src/components/StoryPreview.css */
 
-/* src/components/StoryPreview.css */
 
 .story-preview-container {
   display: flex;
   overflow-x: auto;
   padding: 10px;
-  background-color: white;
-  /* Other styles as needed */
+  background-color: white; 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
 .create-story-button {
@@ -16,7 +15,7 @@
   cursor: pointer;
   padding: 0;
   margin-right: 10px;
-  position: relative; /* Position relative for absolute positioning of children */
+  position: relative; 
 }
 
 .outer-circle {
@@ -27,50 +26,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Needed for absolute positioning of plus sign */
+  position: relative; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .inner-circle {
   background-color: white;
   border-radius: 50%;
-  width: 56px; /* Slightly smaller to create the border effect */
+  width: 56px; 
   height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Needed for absolute positioning of camera icon */
+  position: relative; 
 }
 
 .camera-icon {
-  width: 40%; /* Adjusted as per your update */
+  width: 40%; 
   height: auto;
-  opacity: 0.9; /* Slightly transparent */
+  opacity: 0.5;
+}
+.plus-container {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  transform: translate(50%, 50%); 
 }
 
-.plus-circle {
+.plus-background {
   background-color: white;
   border-radius: 50%;
-  width: 24px; /* Size of the plus sign circle */
-  height: 24px;
-  position: absolute;
-  bottom: -6px; /* Position adjusted to match your design */
-  right: -6px;
+  width: 18px;
+  height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .plus-icon {
   color: #C1C1C1;
-  font-size: 24px; /* Adjust size as needed */
-  line-height: 1; /* To ensure the plus sign is centered */
-  /* Adjust bottom and right to position the plus sign correctly */
-  position: absolute;
-  bottom: 4px; /* Adjusted to align the plus sign as per design */
-  right: 4px;
-  transform: translate(50%, 50%); /* Adjust if necessary */
+  font-size: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -84,24 +83,24 @@
   margin-right: 10px;
 }
 
-.story-gradient-border {
-  background: linear-gradient(45deg, #ff9a9e, #fad0c4); /* Your gradient */
+.story-image-container {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4); 
   border-radius: 50%;
-  padding: 3px; /* Adjust to change the visible 'border' size */
-  display: inline-flex; /* Keeps the shape circular */
+  padding: 3px; 
+  display: inline-flex; 
   justify-content: center;
   align-items: center;
 }
 
 .story-image {
-  width: 56px; /* Adjust size as needed */
-  height: 56px; /* Adjust size as needed */
+  width: 56px;
+  height: 56px; 
   border-radius: 50%;
   object-fit: cover;
 }
 
 .story-name {
-  font-size: 12px;
   margin-top: 4px;
-  color: #333; /* A dark color for the text */
+  color: #333; 
+  font-size: 12px;
 }
