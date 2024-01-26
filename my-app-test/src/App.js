@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import AppHeader from './components/AppHeader';
+import ChatList from './components/ChatList';
+import StoryPreview from './components/StoryPreview';
 import './App.css';
+import data from './materials/sample.json'; // Adjust the path to your sample data
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppHeader />
+      <StoryPreview />
+      <ChatList data={data} />
     </div>
   );
-}
+};
 
 export default App;
