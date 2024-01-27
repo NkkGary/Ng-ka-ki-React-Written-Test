@@ -1,30 +1,28 @@
-/* ... existing styles ... */
-
 .header-right-container {
     display: flex;
     align-items: center;
 }
 
-.long-bubble {
+.outer-bubble {
     display: flex;
     align-items: center;
-    border: 1px solid #c1c1c1;
-    /* example border, adjust as needed */
     border-radius: 20px;
-    /* example border-radius, adjust as needed */
     padding: 5px 10px;
     position: relative;
+    border: 1px solid white; /* White border when search is inactive */
+    transition: border 0.3s ease-in-out;
+}
+
+.outer-bubble.active {
+    border: 1px solid #c1c1c1; /* Visible border when search is active */
 }
 
 .search-input {
+    flex-grow: 1;
     border: none;
     outline: none;
     padding: 5px;
-    margin-right: 5px;
-    /* Adjust spacing between input and icon */
 }
-
-
 
 .menu-btn {
     background: none;
@@ -34,34 +32,10 @@
     font-size: 25px;
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 .search-btn {
-    
     margin-left: 10px;
     background: none;
     border: none;
     cursor: pointer;
-    margin: 0; /* Reset margin */
     display: flex; /* To center the SVG icon */
-
-}
-
-/* When search is not active, we hide the long bubble */
-.hidden {
-    display: none;
-}
-
-.outer-bubble {
-    border-radius: 20px;
-    position: relative;
-}
-
-.outer-bubble.white-border {
-    border: 1px solid white;
-    /* White border when search is inactive */
 }
