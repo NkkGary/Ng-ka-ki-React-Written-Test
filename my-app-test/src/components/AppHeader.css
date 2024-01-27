@@ -39,3 +39,12 @@
     cursor: pointer;
     display: flex; /* To center the SVG icon */
 }
+
+
+  .menu-item {
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+    text-align: left;
+  }
